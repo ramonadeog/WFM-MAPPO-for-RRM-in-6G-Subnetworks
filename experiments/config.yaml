@@ -1,0 +1,37 @@
+
+
+# wfmmarl_simulator/experiments/config.yaml
+
+experiment:
+  training_steps: 20
+  rollout_length: 64
+  ppo_epochs: 4
+  mappo_batch_size: 256
+  maddqn_buffer: 50000
+  maddqn_batch: 64
+
+environment:
+  N: 5
+  K: 10
+  L_m: 50.0
+  cell_radius_m: 2.0
+  fc_hz: 3.5e9
+  noise_dBm: -100
+  p_tx_W: 0.1
+  bandwidth_Hz: 10e6
+  pl0_dB: 46.0
+  d0_m: 1.0
+  pathloss_exp: 2.2
+  sigma_shadow_dB: 6
+  shad_decorr_m: 10.0
+  speed_mps: 3.0
+  Ts_s: 0.001
+  include_buffer: true
+  mean_arrival_bps: 2e6
+
+wfm:
+  embed_dim: 16
+  proj_dim: 32
+  pretrained_encoder_path: "pretrained_wfm_encoder.pt"
+
+device: "cpu"
